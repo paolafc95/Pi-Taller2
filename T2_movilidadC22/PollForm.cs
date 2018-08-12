@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace T2_movilidadC22
 {
-    public partial class LoginForm : Form
+    public partial class PollForm : Form
     {
-        public LoginForm()
+        public PollForm()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
