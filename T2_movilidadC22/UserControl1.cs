@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading;
 
 namespace T2_movilidadC22
 {
@@ -20,8 +21,18 @@ namespace T2_movilidadC22
 
         private void loginbutton_Click(object sender, EventArgs e)
         {
-            PollForm encuesta = new PollForm();
-            encuesta.Show();
+            
+            String admin = "Admin";
+            String contra = "123";
+            if (usertextBox.Text.Equals(admin) && passtextBox.Text.Equals(contra)) {
+                AdminForm administrador = new AdminForm();
+                administrador.Show();               
+
+            }
+            else {
+                PollForm encuesta = new PollForm();
+                encuesta.Show();
+            }
 
             //NEW crear carpeta y archivo para contener los datos de los usuarios a registrarse
             string carpeta = Application.StartupPath + @"\Informacion_de_usuarios";
@@ -32,11 +43,11 @@ namespace T2_movilidadC22
             {
                 if (File.Exists(crea))
                 {
-                    MessageBox.Show("Archivo existente");
+                    //MessageBox.Show("Archivo existente");
                 }
                 else
                 {
-                    MessageBox.Show("Creando archivo");
+                    MessageBox.Show("Creando encuesta");
                     Directory.CreateDirectory(carpeta);
                     using (File.Create(crea));
                                       

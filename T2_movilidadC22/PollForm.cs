@@ -44,7 +44,7 @@ namespace T2_movilidadC22
             {
                 if (File.Exists(creaE))
                 {
-                    MessageBox.Show("Archivo existente");
+                    MessageBox.Show("Encuesta enviada");                   
                 }
                 else
                 {
@@ -69,9 +69,10 @@ namespace T2_movilidadC22
             String porque = porqueTxtbx.Text;
 
 
-            string[] infoEncuesta = { "\n" + dificultades +";"+ llegaTiempo+" llegó a tiempo"+";" + tiempoTarde + ";" + carrera +";"+tiempoViaje + ";"+ acuerdo +" estoy de acuerdo"+ ";"+ medioTrans + ";"+jornada + ";"+porque +";" };
+            string[] infoEncuesta = { "\n" + "Dificultad: "+ dificultades +";"+ llegaTiempo+" llegó a tiempo"+";" + "Tiempo tarde:"+tiempoTarde + " minutos"+ ";" + "Programa: "+carrera +";"+ "Tiempo de viaje:"+tiempoViaje + ";"+ acuerdo +" estoy de acuerdo"+ ";"+"Medio transp. "+ medioTrans + ";"+ "Jornada "+jornada + ";"+porque +";" };
 
-            File.AppendAllLines(creaE, infoEncuesta);    
+            File.AppendAllLines(creaE, infoEncuesta);
+            this.Close(); 
         }
 
         private void PollForm_Load(object sender, EventArgs e)
