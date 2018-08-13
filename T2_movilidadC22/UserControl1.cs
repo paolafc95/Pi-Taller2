@@ -16,5 +16,13 @@ namespace T2_movilidadC22
         {
             InitializeComponent();
         }
+
+        private void loginbutton_Click(object sender, EventArgs e)
+        {
+            //NEW crear carpeta y archivo para contener los datos de los usuarios a registrarse
+            string carpeta = Application.StartupPath + @"\Informacion_de_usuarios";
+            string archivo = @"\usuarios_registrados.txt";
+            string crea = carpeta + archivo;
+        }
     }
 }

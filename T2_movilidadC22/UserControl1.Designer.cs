@@ -68,6 +68,7 @@
             this.passtextBox.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passtextBox.Location = new System.Drawing.Point(131, 94);
             this.passtextBox.Name = "passtextBox";
+            this.passtextBox.PasswordChar = '*';
             this.passtextBox.Size = new System.Drawing.Size(154, 23);
             this.passtextBox.TabIndex = 3;
             // 
@@ -80,6 +81,7 @@
             this.loginbutton.TabIndex = 4;
             this.loginbutton.Text = "Ingresar";
             this.loginbutton.UseVisualStyleBackColor = true;
+            this.loginbutton.Click += new System.EventHandler(this.loginbutton_Click);
             // 
             // UserControl1
             // 
