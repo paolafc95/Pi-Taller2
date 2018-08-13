@@ -33,13 +33,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.siTimeradioBt = new System.Windows.Forms.RadioButton();
-            this.noTimeradioBt = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.siAcuerdoRadioBt = new System.Windows.Forms.RadioButton();
-            this.noAcuerdoRadioBt = new System.Windows.Forms.RadioButton();
             this.dificultadTxtBox = new System.Windows.Forms.TextBox();
             this.tiempoTardeTxtbx = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -55,6 +51,8 @@
             this.porqueTxtbx = new System.Windows.Forms.TextBox();
             this.EnviarButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
+            this.aTiempotxtbx = new System.Windows.Forms.TextBox();
+            this.acuerdoTxtbx = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -112,30 +110,6 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "¿Llegó a tiempo?";
             // 
-            // siTimeradioBt
-            // 
-            this.siTimeradioBt.AutoSize = true;
-            this.siTimeradioBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siTimeradioBt.Location = new System.Drawing.Point(120, 202);
-            this.siTimeradioBt.Name = "siTimeradioBt";
-            this.siTimeradioBt.Size = new System.Drawing.Size(36, 19);
-            this.siTimeradioBt.TabIndex = 5;
-            this.siTimeradioBt.TabStop = true;
-            this.siTimeradioBt.Text = "SI";
-            this.siTimeradioBt.UseVisualStyleBackColor = true;
-            // 
-            // noTimeradioBt
-            // 
-            this.noTimeradioBt.AutoSize = true;
-            this.noTimeradioBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noTimeradioBt.Location = new System.Drawing.Point(162, 202);
-            this.noTimeradioBt.Name = "noTimeradioBt";
-            this.noTimeradioBt.Size = new System.Drawing.Size(43, 19);
-            this.noTimeradioBt.TabIndex = 6;
-            this.noTimeradioBt.TabStop = true;
-            this.noTimeradioBt.Text = "NO";
-            this.noTimeradioBt.UseVisualStyleBackColor = true;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -166,30 +140,6 @@
             this.label7.Size = new System.Drawing.Size(383, 15);
             this.label7.TabIndex = 9;
             this.label7.Text = "¿Estaría de acuerdo con una modificación en los horarios de clases?";
-            // 
-            // siAcuerdoRadioBt
-            // 
-            this.siAcuerdoRadioBt.AutoSize = true;
-            this.siAcuerdoRadioBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.siAcuerdoRadioBt.Location = new System.Drawing.Point(402, 299);
-            this.siAcuerdoRadioBt.Name = "siAcuerdoRadioBt";
-            this.siAcuerdoRadioBt.Size = new System.Drawing.Size(36, 19);
-            this.siAcuerdoRadioBt.TabIndex = 10;
-            this.siAcuerdoRadioBt.TabStop = true;
-            this.siAcuerdoRadioBt.Text = "SI";
-            this.siAcuerdoRadioBt.UseVisualStyleBackColor = true;
-            // 
-            // noAcuerdoRadioBt
-            // 
-            this.noAcuerdoRadioBt.AutoSize = true;
-            this.noAcuerdoRadioBt.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.noAcuerdoRadioBt.Location = new System.Drawing.Point(444, 299);
-            this.noAcuerdoRadioBt.Name = "noAcuerdoRadioBt";
-            this.noAcuerdoRadioBt.Size = new System.Drawing.Size(43, 19);
-            this.noAcuerdoRadioBt.TabIndex = 11;
-            this.noAcuerdoRadioBt.TabStop = true;
-            this.noAcuerdoRadioBt.Text = "NO";
-            this.noAcuerdoRadioBt.UseVisualStyleBackColor = true;
             // 
             // dificultadTxtBox
             // 
@@ -315,6 +265,7 @@
             this.EnviarButton.TabIndex = 25;
             this.EnviarButton.Text = "Enviar";
             this.EnviarButton.UseVisualStyleBackColor = true;
+            this.EnviarButton.Click += new System.EventHandler(this.EnviarButton_Click);
             // 
             // label13
             // 
@@ -327,11 +278,31 @@
             this.label13.TabIndex = 26;
             this.label13.Text = "Gracias por su aporte.";
             // 
+            // aTiempotxtbx
+            // 
+            this.aTiempotxtbx.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.aTiempotxtbx.Location = new System.Drawing.Point(121, 204);
+            this.aTiempotxtbx.MaxLength = 2;
+            this.aTiempotxtbx.Name = "aTiempotxtbx";
+            this.aTiempotxtbx.Size = new System.Drawing.Size(58, 20);
+            this.aTiempotxtbx.TabIndex = 29;
+            // 
+            // acuerdoTxtbx
+            // 
+            this.acuerdoTxtbx.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.acuerdoTxtbx.Location = new System.Drawing.Point(401, 303);
+            this.acuerdoTxtbx.MaxLength = 2;
+            this.acuerdoTxtbx.Name = "acuerdoTxtbx";
+            this.acuerdoTxtbx.Size = new System.Drawing.Size(62, 20);
+            this.acuerdoTxtbx.TabIndex = 30;
+            // 
             // PollForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 503);
+            this.Controls.Add(this.acuerdoTxtbx);
+            this.Controls.Add(this.aTiempotxtbx);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.EnviarButton);
             this.Controls.Add(this.porqueTxtbx);
@@ -347,13 +318,9 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.tiempoTardeTxtbx);
             this.Controls.Add(this.dificultadTxtBox);
-            this.Controls.Add(this.noAcuerdoRadioBt);
-            this.Controls.Add(this.siAcuerdoRadioBt);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.noTimeradioBt);
-            this.Controls.Add(this.siTimeradioBt);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -363,6 +330,7 @@
             this.Name = "PollForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Encuesta al estudiante";
+            this.Load += new System.EventHandler(this.PollForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -376,13 +344,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton siTimeradioBt;
-        private System.Windows.Forms.RadioButton noTimeradioBt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.RadioButton siAcuerdoRadioBt;
-        private System.Windows.Forms.RadioButton noAcuerdoRadioBt;
         private System.Windows.Forms.TextBox dificultadTxtBox;
         private System.Windows.Forms.TextBox tiempoTardeTxtbx;
         private System.Windows.Forms.Label label8;
@@ -398,5 +362,7 @@
         private System.Windows.Forms.TextBox porqueTxtbx;
         private System.Windows.Forms.Button EnviarButton;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox aTiempotxtbx;
+        private System.Windows.Forms.TextBox acuerdoTxtbx;
     }
 }

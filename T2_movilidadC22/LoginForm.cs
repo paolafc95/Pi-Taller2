@@ -21,5 +21,10 @@ namespace T2_movilidadC22
         {
 
         }
+
+        private void userControl11_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
